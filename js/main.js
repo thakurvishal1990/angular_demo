@@ -6,8 +6,8 @@
 require.config({
 
     paths: {
-        'jquery' : '../lib/jquery/jquery',
-        'bootstrap' : '../lib/bootstrap/bootstrap.min',
+        'jQuery' : '../lib/jquery/jquery',
+        'jqbootstrap' : '../lib/bootstrap/bootstrap.min',
         'jqm' : '../lib/jquerymobile/jquery.mobile.min',
         'angular': '../lib/angular/angular',
         'angular-route': '../lib/angular-route/angular-route',
@@ -19,11 +19,12 @@ require.config({
      * require some fine tuning to dependency mgt'
      */
     shim: {
-        'jquery': {
-            exports: 'jquery'
+        'jQuery' : { exports: '$'},
+        'jqbootstrap' :{
+            deps: ['jQuery']
         },
-        'jqm','bootstrap' :{
-            deps: ['jquery']
+        'jqm' :{
+            deps: ['jQuery']
         },
         'angular': {
             exports: 'angular'
