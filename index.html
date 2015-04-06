@@ -17,9 +17,7 @@
 
 	</head>
 	<body>
-		<div class="loading-background hide"><!-- Toggle the class hide on success of service calls -->
-			<div class="loading"></div>
-		</div>
+		
 		<div ng-view></div>
 		<!-- <div id="tpl-content" ng-include src="currentTpl='/tpl.html'">
 			
@@ -27,7 +25,17 @@
 		<script type="text/ng-template" id="/tpl.html">
 			
 				</script> -->
-		<script src="lib/requirejs/require.js" data-main="js/main.js"></script>
+		<script src="lib/requirejs/require.js" data-main="js/main.js" async="false"></script>
+		<script type="text/javascript" src="../lib/jquery/jquery.js"></script>
+		<script type="text/javascript" src="../lib/jquerymobile/jquery.mobile.min.js"></script>
+	<script type="text/javascript">
+	jQuery = $.noConflict();
+		jQuery.mobile.ajaxEnabled = false;
+        jQuery.mobile.linkBindingEnabled = false; 
+        jQuery.mobile.hashListeningEnabled = false; 
+        jQuery.mobile.pushStateEnabled = false; 
+        jQuery.mobile.changePage.defaults.changeHash = false;
+	</script>
 				<!--<script src="js/jquery-1.10.2.js"></script>
 				<script src="js/bootstrap.min.js"></script>
 				<script src="js/jquery.mobile.min.js"></script>

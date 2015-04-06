@@ -3,16 +3,19 @@
  * NOTE: the ng-app attribute should not be on the index.html when using ng.bootstrap
  */
  console.log('in bootstrap');
-define([
+ //require(['jQuery','jqm','jqbootstrap'],function(jQuery,jqm,jqbootstrap) {
+        define([
     'require',
-    'jQuery',
-    'jqm',
-    'jqbootstrap',
     'angular',
+    /*'jQuery',
+    'jqbootstrap',*/
+    //'jqm',
     'app',
     'routes'
-], function (require, jQuery, jqm, jqbootstrap, ng) {
+], function (require, ng) {
     'use strict';
+    
+    
     
     /*
      * place operations that need to initialize prior to app start here
@@ -20,6 +23,9 @@ define([
      */
 
     require(['domReady!'], function (document) {
+        
         ng.bootstrap(document, ['app']);
     });
 });
+   // })
+

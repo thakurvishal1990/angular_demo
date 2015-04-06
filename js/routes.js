@@ -19,5 +19,6 @@ define(['./app'], function (app) {
         $routeProvider.otherwise({
             redirectTo: '/dashboard'
         });
+        
     }]);
 });
