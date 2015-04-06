@@ -147,7 +147,7 @@ padding: 0px;
 	background-repeat: no-repeat;
 }
 /*** LOADING END ***/
-.refresh-content{
+.dashboard-refresh-content{
 	color:#fff;
 }
 .notification-content{
@@ -237,7 +237,7 @@ padding: 0px;
 .notification-wrapper .hide-wrapper,.notification-wrapper .show-wrapper{
 	color: #fff;
 }
-.hide-content,.show-content,.refresh-content{
+.hide-content,.show-content,.dashboard-refresh-content{
 	padding: 0px 4px;
 	line-height: 36px;
 	font-size: 108%;
@@ -1502,7 +1502,7 @@ input[type='range']::-webkit-slider-thumb {
     padding: 10px;
 	margin-right: 5px;
 }
-.service-name-contact,.service-name,.refresh-content{
+.service-name-contact,.service-name,.landing-refresh-content{
 	color: #263a81;
 font-size: 16px;
 font-weight: bold;
