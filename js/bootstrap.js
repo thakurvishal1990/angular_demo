@@ -7,12 +7,12 @@
         define([
     'require',
     'angular',
-    /*'jQuery',
-    'jqbootstrap',*/
-    //'jqm',
+    'jQuery',
+    /*'jqbootstrap',*/
+    'jqm',
     'app',
     'routes'
-], function (require, ng) {
+], function (require, ng, jQuery, jqm) {
     'use strict';
     
     
@@ -25,6 +25,17 @@
     require(['domReady!'], function (document) {
         
         ng.bootstrap(document, ['app']);
+        //require(['jQuery','jqm'],function(jQuery){
+            //jQuery = $.noConflict();
+            console.log($);
+            console.log(jQuery);
+            jQuery.mobile.ajaxEnabled = false;
+            jQuery.mobile.linkBindingEnabled = false; 
+            jQuery.mobile.hashListeningEnabled = false; 
+            jQuery.mobile.pushStateEnabled = false; 
+            jQuery.mobile.changePage.defaults.changeHash = false;
+            
+        //});
     });
 });
    // })
