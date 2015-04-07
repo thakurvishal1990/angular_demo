@@ -10,6 +10,7 @@
     'jQuery',
     /*'jqbootstrap',*/
     'jqm',
+    'jquery-mobile-angular-adapter',
     'app',
     'routes'
 ], function (require, ng, jQuery, jqm) {
@@ -24,16 +25,23 @@
 
     require(['domReady!'], function (document) {
         
-        ng.bootstrap(document, ['app']);
+        
         //require(['jQuery','jqm'],function(jQuery){
             //jQuery = $.noConflict();
             console.log($);
             console.log(jQuery);
-            jQuery.mobile.ajaxEnabled = false;
+            //jQuery(document).bind("mobileinit", function () {
+    /*jQuery.mobile.ajaxEnabled = false;
+    jQuery.mobile.linkBindingEnabled = false;
+    jQuery.mobile.hashListeningEnabled = false;
+    jQuery.mobile.pushStateEnabled = false;*/
+//});
+ng.bootstrap(document, ['app']);
+            /*jQuery.mobile.ajaxEnabled = false;
             jQuery.mobile.linkBindingEnabled = false; 
             jQuery.mobile.hashListeningEnabled = false; 
             jQuery.mobile.pushStateEnabled = false; 
-            jQuery.mobile.changePage.defaults.changeHash = false;
+            jQuery.mobile.changePage.defaults.changeHash = false;*/
             
         //});
     });

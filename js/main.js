@@ -13,7 +13,8 @@ require.config({
         'jQuery' : '../lib/jquery/jquery',
         'jqbootstrap' : '../lib/bootstrap/bootstrap.min',
         'jqm' : '../lib/jquerymobile/jquery.mobile.min',
-        /*'jquery-mobile-angular-adapter' : '../lib/jquerymobile-angular-adapter/jquery-mobile-angular-adapter-standalone',*/
+        'angular-sanitize' : '../lib/angular-sanitize/angular-sanitize.min',
+        'jquery-mobile-angular-adapter' : '../lib/jquerymobile-angular-adapter/jquery-mobile-angular-adapter-standalone'
         
     },
 
@@ -34,6 +35,13 @@ require.config({
         },
         'angular-route': {
             deps: ['angular']
+        },
+        'angular-sanitize':{
+          deps: ['angular']
+        },
+        'jquery-mobile-angular-adapter':{
+            exports: 'jquery-mobile-angular-adapter',
+            deps: ['jQuery','jqm','angular','angular-route','angular-sanitize']
         }
     },
     
