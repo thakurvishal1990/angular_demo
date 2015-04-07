@@ -35,14 +35,14 @@ require.config({
         },
         'angular-route': {
             deps: ['angular']
-        },
+        }/*,
         'angular-sanitize':{
-          deps: ['angular']
+            deps: ['angular']
         },
         'jquery-mobile-angular-adapter':{
             exports: 'jquery-mobile-angular-adapter',
             deps: ['jQuery','jqm','angular','angular-route','angular-sanitize']
-        }
+        }*/
     },
     
     deps: [

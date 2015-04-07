@@ -20,5 +20,6 @@ define(['./app'], function (app) {
             redirectTo: '/dashboard'
         });
         $locationProvider.html5Mode(true);
+        
     }]);
 });
