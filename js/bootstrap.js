@@ -37,6 +37,16 @@
     jQuery.mobile.pushStateEnabled = false;
 //});
 ng.bootstrap(document, ['app']);
+function disableBack() { window.history.forward(); }
+
+        window.onload = disableBack();
+        window.onpageshow = function(evt) {
+            console.log('in page show');
+            if (evt.persisted){
+                disableBack();    
+            }
+            
+        }
             /*jQuery.mobile.ajaxEnabled = false;
             jQuery.mobile.linkBindingEnabled = false; 
             jQuery.mobile.hashListeningEnabled = false; 

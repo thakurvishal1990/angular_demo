@@ -4,6 +4,7 @@ define(['jQuery','./module'], function (jQuery,controllers) {
     jQuery.mobile.linkBindingEnabled = false;
     jQuery.mobile.hashListeningEnabled = false;
     jQuery.mobile.pushStateEnabled = false;*/
+    
     controllers.controller('MyCtrl2', [function ($scope) {
         jQuery('#wrapper').page('destroy').page();
        // jQuery(document).bind("mobileinit", function () {
