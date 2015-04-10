@@ -20,7 +20,7 @@ define(['jQuery','./app'], function (jQuery,app) {
             redirectTo: '/dashboard'
         });
        
-        $locationProvider.html5Mode(true);
+       // $locationProvider.html5Mode(true);
         
     }]).run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
     //Do your $on in here, like this:
@@ -35,10 +35,9 @@ define(['jQuery','./app'], function (jQuery,app) {
          console.log($rootScope.actualLocation);
          if($location.path() == $rootScope.actualLocation){
         
-         //event.stopPropagation();
+        
           event.preventDefault();
-         /*$location.href = "https://angular-demo-thakurvishal1990-1.c9.io/";
-         $location.path($rootScope.actualLocation);*/
+        
          }
     });
 // $rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
