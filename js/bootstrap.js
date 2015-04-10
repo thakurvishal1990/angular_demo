@@ -37,7 +37,7 @@
     jQuery.mobile.pushStateEnabled = false;
 //});
 ng.bootstrap(document, ['app']);
-function disableBack() { window.history.forward(); }
+/*function disableBack() { window.history.forward(); }
 
         window.onload = disableBack();
         window.onpageshow = function(evt) {
@@ -46,7 +46,7 @@ function disableBack() { window.history.forward(); }
                 disableBack();    
             }
             
-        }
+        }*/
             /*jQuery.mobile.ajaxEnabled = false;
             jQuery.mobile.linkBindingEnabled = false; 
             jQuery.mobile.hashListeningEnabled = false; 
