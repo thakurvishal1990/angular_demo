@@ -3,7 +3,7 @@
  * The routes you see here will be anchors '#/' unless specifically configured otherwise.
  */
 console.log('in routes');
-define(['./app'], function (app) {
+define(['jQuery','./app'], function (jQuery,app) {
     'use strict';
     return app.config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
         $routeProvider.when('/dashboard', {
@@ -25,17 +25,29 @@ define(['./app'], function (app) {
     }]).run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
     //Do your $on in here, like this:
     $rootScope.$on('$locationChangeSuccess', function() {
+        console.log('on change');
+        console.log($location.path());
         $rootScope.actualLocation = $location.path();
-    });    
-$rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
-        if($rootScope.actualLocation === newLocation) {
-            console.log(newLocation);
-            console.log($rootScope.actualLocation);
-            console.log(oldLocation);
-            $location.path(oldLocation);
-            //$window.location.href = oldLocation;
-            alert('Why did you use history back?');
-        }
     });
+    $rootScope.$on('$locationChangeStart', function(event) {
+         console.log('in location start');
+         console.log($location.path());
+         console.log($rootScope.actualLocation);
+         if($location.path() == $rootScope.actualLocation){
+        
+         //event.stopPropagation();
+          event.preventDefault();
+         /*$location.href = "https://angular-demo-thakurvishal1990-1.c9.io/";
+         $location.path($rootScope.actualLocation);*/
+         }
+    });
+// $rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
+//         if($rootScope.actualLocation === newLocation) {
+//             console.log(newLocation);
+//             console.log($rootScope.actualLocation);
+//             console.log(oldLocation);
+//             alert('Why did you use history back?');
+//         }
+//     });
 });
 });
